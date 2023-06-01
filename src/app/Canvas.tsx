@@ -222,8 +222,8 @@ const Canvas = ({ width, height, onExplode }: CanvasProps) => {
 };
 
 Canvas.defaultProps = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: window ? window.innerWidth : "1300px",
+  height: window ? window.innerHeight : "1300px",
 };
 
 export default Canvas;
