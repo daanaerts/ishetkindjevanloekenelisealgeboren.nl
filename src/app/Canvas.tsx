@@ -4,8 +4,6 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import "./canvas.css";
 
 interface CanvasProps {
-  width: number;
-  height: number;
   onExplode: () => void;
 }
 
@@ -14,7 +12,10 @@ type Coordinate = {
   y: number;
 };
 
-const Canvas = ({ width, height, onExplode }: CanvasProps) => {
+const Canvas = ({ onExplode }: CanvasProps) => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isPainting, setIsPainting] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -219,11 +220,6 @@ const Canvas = ({ width, height, onExplode }: CanvasProps) => {
   return (
     <canvas ref={canvasRef} height={height} width={width} className="canvas" />
   );
-};
-
-Canvas.defaultProps = {
-  width: typeof window !== "undefined" ? window.innerWidth : "1300px",
-  height: typeof window !== "undefined" ? window.innerHeight : "1300px",
 };
 
 export default Canvas;

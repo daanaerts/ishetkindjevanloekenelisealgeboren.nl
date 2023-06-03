@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Canvas from "./Canvas";
+import NoSSR from "./NoSSR";
 
 function Level1() {
   const [show, setShow] = useState(false);
@@ -31,7 +32,9 @@ function Level1() {
           <h4>Het kindje van Elise en Loek is nog niet geboren</h4>
         </div>
       )}
-      <Canvas onExplode={() => {}} />
+      <NoSSR>
+        <Canvas onExplode={() => {}} />
+      </NoSSR>
       {/* <Canvas onExplode={() => props.onComplete()} /> */}
     </div>
   );
