@@ -28,8 +28,11 @@ function Level1() {
           className="banner"
           style={{ transform: `translateY(${translate})` }}
         >
-          <h1>Nee</h1>
-          <h4>Het kindje van Elise en Loek is nog niet geboren</h4>
+          <h1>❤️ JA 🥳</h1>
+          <h4>
+            Het kindje van Elise en Loek is geboren. <br />
+            Zondag 4 juni om 1:17 - 2775gr
+          </h4>
         </div>
       )}
       <NoSSR>
